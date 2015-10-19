@@ -1,7 +1,7 @@
 'use strict';
 
 var TestCtrl = function($scope) {
-  $scope.test = 'Esta en una prueba de controlador en archivo separado y actualizable';
+  $scope.test = 'Text controller works fine!';
 };
 
 module.exports = TestCtrl;
