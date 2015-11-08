@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "angular": "^1.4.7"
+    "angular": "^1.4.7",
+    "jquery": "^1.11.3"
   },
   "devDependencies": {
     "browser-sync": "^2.9.8",

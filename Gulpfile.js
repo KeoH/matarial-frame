@@ -17,7 +17,13 @@ gulp.task('views', function() {
 
 
   gulp.src('./src/html/views/**/*')
-  .pipe(gulp.dest('apps/views/'))
+  .pipe(gulp.dest('app/views/'))
+  .pipe(browserSync.reload({stream:true}));
+});
+
+gulp.task('images', function() {
+  gulp.src('./src/img/**/*')
+  .pipe(gulp.dest('app/img/'))
   .pipe(browserSync.reload({stream:true}));
 });
 
@@ -39,9 +45,12 @@ gulp.task('browserify', function() {
   }))
   // Bundle to a single file
   .pipe(concat('main.js'))
-  // Output it to our dist folder
-  .pipe(browserSync.reload({stream:true}))
-  .pipe(gulp.dest('app/js'));
+  // // Output it to our dist folder
+   .pipe(browserSync.reload({stream:true}))
+   .pipe(gulp.dest('app/js'));
+  //gulp.src('./src/js/**/*')
+  //.pipe(gulp.dest('app/js/'))
+  //.pipe(browserSync.reload({stream:true}));
 });
 
 // Browser Sync
@@ -65,8 +74,9 @@ gulp.task('sass', function(){
 
 gulp.task('watch', function (){
   gulp.watch('src/html/**/*.html', ['views']);
+  gulp.watch('src/img/**/*.*', ['images']);
   gulp.watch('src/sass/**/*.sass', ['sass']);
   gulp.watch(['src/js/**/*.js'],['lint', 'browserify']);
 });
 
-gulp.task('default', ['views', 'browser-sync', 'lint', 'browserify', 'watch']);
+gulp.task('default', ['views', 'images', 'browser-sync', 'lint', 'browserify', 'watch']);
