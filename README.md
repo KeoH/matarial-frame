@@ -1,11 +1,19 @@
-# Proyecto configuración básica
+# Material Frame
 
-Este es un repositorio donde está un proyecto base preconfigurado para ahorrar tiempo en el futuro.
+Material Frame es un desarrollo personal. El objetivo es desarrollar mi propio framework css, basado en Material Design e inspirado por bootstrap y otros. No pretende abarcar tanto, pero poco a poco.
+
+## Herramientas para desarrollarlo
+
+Algunas herramientas que utilizaré para desarrollarlo son las siguientes:
 
 * Angular.js
 * Browserify, para trabajar con Javascript como en NodeJs
 * Sass, preprocesador css
 * Browser Sync , para sincronizar el navegador a cada cambio
+
+## ¿Cómo se usa?
+
+Para usarlo no hay mas que compilar el sass y usar el css que proveere de forma más sencilla cuando el proyecto avance.
 
 ## Instrucciones
 
